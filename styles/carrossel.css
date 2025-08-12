@@ -1,0 +1,101 @@
+.carrossel__titulo{
+    color: var(--laranja);
+    background-color: var(--branco);
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1.25rem 0 0.5rem 0;
+}
+
+.swiper-slide img{
+    width: 33vw;
+}
+
+.swiper-button-prev, .swiper-button-next{
+    display: none;
+}
+
+.swiper-pagination{
+    position: initial;
+    margin: 0.5em 0
+}
+
+.swiper-scrollbar{
+    display: none;
+}
+
+.swiper2-pagination{
+    text-align: center;
+    position: initial;
+    margin: 0.5em 0
+}
+
+@media screen and (min-width: 1024px){
+    .carrossel__titulo{
+        font-size: 26px;
+    }
+
+    .swiper-pagination, .swiper2-pagination{
+        margin: 2em 0 3em 0;
+    }
+
+    .swiper{
+        width: 80%;
+    }
+
+    .swiper-slide img{
+        width: 80%
+    }
+
+    .swiper-button-prev, .swiper-button-next{
+        display: block;
+        margin-right: 2.5em;
+        width: fit-content;
+    }
+
+}
+
+@media screen and (min-width: 1728px){
+
+    .carrossel{
+        height: 400px;
+    }
+    
+    .carrossel__container {
+        display: flex;
+        flex-wrap: wrap; /* Permite que quebrem linha em telas menores */
+        width: 60%;
+        justify-content: center;
+        align-items: flex-start;
+        box-sizing: border-box;
+        padding: 1em;
+    }
+
+    /* Carrossel ocupa 100% em telas menores e até 65% em desktops */
+    .carrossel__container > div:first-child {
+        flex: 1 1 35%; /* Cresce, encolhe, base 60% */
+        min-width: 150px;
+    }
+
+    /* Recomendação ocupa até 35% */
+    .container__recomendacao {
+        flex: 1 1 35%;
+        justify-content: left;
+        max-width: 0px;
+        box-sizing: border-box;
+    }
+
+    /* Garante que imagens e elementos não transbordem */
+    .carrossel img,
+    .recomendacao img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .recomendacao__img{
+        width: 13em;
+        height: auto;
+    }
+}

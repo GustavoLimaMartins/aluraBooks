@@ -1,0 +1,121 @@
+.container__recomendacao{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5em 0 1em 0;
+}
+
+.recomendacao{
+    font-family: var(--font-poppins);
+    display: flex;
+    flex-direction: row;
+    background-color: var(--branco);
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px #888888;
+    width: 90vw;
+}
+
+.recomendacao__texto-titulo{
+    color: var(--laranja);
+    line-height: 1.5em;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 1em 0 1em 1rem;
+}
+
+.recomendacao__texto-subtitulo{
+    color: var(--azul-escuro);
+    line-height: 1.4em;
+    font-weight: bold;
+    font-size: 1.125rem;
+    text-align: left;
+    padding: 0 0 0.5em 1rem;
+}
+
+.recomendacao__texto-descricao{
+    color: var(--preto);
+    text-align: left;
+    line-height: 1.5em;
+    font-size: 14px;
+    padding: 0 2em 0.5em 1rem;
+}
+
+.recomendacao__texto-btn{
+    display: flex;
+    gap: 24px;
+    padding: 0.5rem 0 0 1.5em 
+}
+
+.recomendacao__img{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin: 1.75em 1em 0 0 ;
+}
+
+.recomendacao__img-saiba{
+    margin-bottom: 1.25em;
+    background-color: var(--laranja);
+    padding: 0.75em 1em;
+    text-align: center;
+    text-decoration: none;
+    color: var(--branco);
+    font-weight: bold;
+}
+
+.recomendacao__cinco-estrelas{
+    margin: 1.5rem 0 0 1rem;
+}
+
+@media screen and (min-width: 428px) {
+    .recomendacao__texto-subtitulo{
+        padding-right: 2em;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .recomendacao{
+        width: 40vw;
+        margin: 2.5em auto;
+    }
+
+    .recomendacao__img-saiba{
+        width: 68%
+    }
+
+    .recomendacao__texto-subtitulo{
+        padding-right: 0;
+    }
+}
+
+@media screen and (min-width: 1728px){
+
+    .recomendacao{
+        width: 32vw;
+        height: auto;
+        margin-bottom: 0px;
+        padding-bottom: 2em;
+    }
+
+    .recomendacao__texto-titulo{
+        font-size: 32px;
+    }
+
+    .recomendacao__texto-descricao{
+        font-size: 16px;
+    }
+
+    .recomendacao__img-saiba{
+        width: 8em;
+    }
+
+    .recomendacao__texto-btn{
+        align-items: center;
+    }
+
+    .recomendacao__texto-subtitulo{
+        padding-right: 0;
+    }
+}
